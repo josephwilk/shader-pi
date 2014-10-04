@@ -1,0 +1,3 @@
+[submodule "vendor/ashton"]
+	path = vendor/ashton
+	url = git@github.com:Spooner/ashton.git
