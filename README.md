@@ -54,7 +54,9 @@ void main(void)
 	gl_FragColor = vec4(c,1.0);
 }
 ```
+## TODO:
 
+* Fullscreen but windowed - https://wiki.libsdl.org/SDL_CreateWindow + https://github.com/jlnr/gosu/blob/master/src/Window.cpp#L75-L77
 
 ## LICENSE
 
