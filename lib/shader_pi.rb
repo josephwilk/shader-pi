@@ -1,3 +1,6 @@
+#We have to do some hairy loading since we are being run in the context 
+# of the SonicPi Server. We give up control of execution means, hence bundler, etc is hard.
+$LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__)) + "/../vendor/ashton/lib/"
 require "ashton"
 
 class ShaderWindow < Gosu::Window
