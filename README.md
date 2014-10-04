@@ -8,6 +8,8 @@ Shaders for use with SonicPi
 
 ### Example Code
 
+The intention is to run our Ruby code inside of SonicPis server. To achieve this we have to hack around Load paths since we cannot control execution and hence use lovely bundler stuff.
+
 ```ruby
 PROJECT_ROOT = "/Users/josephwilk/Workspace/josephwilk/ruby/shader-pi"
 $LOAD_PATH.unshift "#{PROJECT_ROOT}/lib/"
