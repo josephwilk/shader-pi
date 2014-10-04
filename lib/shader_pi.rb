@@ -8,7 +8,7 @@ class ShaderWindow < Gosu::Window
     super 800, 600, false
     shader_fragement =<<-END
 #version 110
-uniform float in_T;
+uniform float in_GlobalTime;
 #{File.read(shader_file)}
 END
     @uniforms   = uniforms
@@ -20,7 +20,7 @@ END
 
   def update
     $gosu_blocks.clear if defined? $gosu_blocks # Workaround for Gosu bug (0.7.45)
-    @shader.t = Time.now - @start_time
+    @shader.global_time = Time.now - @start_time
     @uniforms.each {|k,v| @shader.send(:"#{k}=", v)}
   end
 

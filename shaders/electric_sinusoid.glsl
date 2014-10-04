@@ -14,7 +14,7 @@ void main(void)
 	
 	vec2 p = uv*2.0 - 1.0;
 	p *= 15.0;
-	vec2 sfunc = vec2(p.x, p.y + 5.0*sin(uv.x*10.0-in_T*2.0 + cos(in_T*7.0) )+2.0*cos(uv.x*25.0+in_T*4.0));
+	vec2 sfunc = vec2(p.x, p.y + 5.0*sin(uv.x*10.0-in_GlobalTime*2.0 + cos(in_GlobalTime*7.0) )+2.0*cos(uv.x*25.0+in_GlobalTime*4.0));
 	sfunc.y *= uv.x*2.0+0.05;
 	sfunc.y *= 2.0 - uv.x*2.0+0.05;
 	sfunc.y /= 0.1; // Thickness fix
